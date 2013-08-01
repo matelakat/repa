@@ -1,1 +1,2 @@
+BR2_x86_64=y
 BR2_DEFCONFIG="$(CONFIG_DIR)/defconfig"
