@@ -26,3 +26,7 @@ Asks buildroot to download the dependencies.
 Ask buildroot to build the system.
 
     ./build.sh
+
+## Try out the new system
+
+    ./tryit.sh
