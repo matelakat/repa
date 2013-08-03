@@ -65,6 +65,17 @@ an external cross compiler.
     ct-ng build.2
     # This took 58:50.98 to complete
 
+## How to create the config patch
+
+This is how you create a Buildroot origin patch
+
+    diff -u  .workspace/buildroot-2013.05/package/Config.in.orig \
+      .workspace/buildroot-2013.05/package/Config.in > package_config.patch
+
+This is how you apply it
+
+    patch -p 0 --forward < package_config.patch
+
 ## Useful documents
 
  - http://osmz.mrl.cz/buildroot.html

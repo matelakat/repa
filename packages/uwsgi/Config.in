@@ -1,0 +1,7 @@
+config BR2_PACKAGE_UWSGI
+    bool "uwsgi"
+    help
+        The uWSGI project aims at developing a full stack for building (and
+        hosting) clustered/distributed network applications. 
+
+        http://projects.unbit.it/uwsgi/
