@@ -1,5 +1,6 @@
 .toolchain-config
 .crosstool-ng-src
 .crosstool-ng
+.crosstool
 .workspace
 .ctng
