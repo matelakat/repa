@@ -1,7 +1,16 @@
 repa
 ====
 
-My buildroot experiments
+My buildroot/cross build experiments
+
+## Create cross compiler
+
+### Install the tool that will create the cross compiler
+
+Clone crosstool-ng sources, and check out a specific version, and install it:
+
+    ./install_crosstool_ng.sh
+
 
 ## Create workspace
 
