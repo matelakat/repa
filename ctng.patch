@@ -1,0 +1,11 @@
+--- ct/lib/ct-ng.1.18.0/scripts/build/libc/glibc-eglibc.sh-common.orig	2013-08-03 22:00:59.716983774 +0100
++++ ct/lib/ct-ng.1.18.0/scripts/build/libc/glibc-eglibc.sh-common	2013-08-03 22:01:48.629226310 +0100
+@@ -404,7 +404,7 @@
+             # but it breaks arm, see http://sourceware.org/ml/crossgcc/2006-01/msg00091.html
+             case "${CT_ARCH}" in
+                 arm)    ;;
+-                *)  CT_DoExecLog ALL cp -v "misc/syscall-list.h"            \
++                *)  CT_DoExecLog ALL cp -v "misc/bits/syscall.h"            \
+                                            "${CT_HEADERS_DIR}/bits/syscall.h"
+                     ;;
+             esac
