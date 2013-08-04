@@ -17,5 +17,6 @@ fi
 
 qemu-system-x86_64 \
   -kernel $KERNEL_FILE \
+  -net none \
   -drive file="$WORKSPACE/$BUILDROOT_VER/output/images/rootfs.ext2" \
   -append root=/dev/sda
