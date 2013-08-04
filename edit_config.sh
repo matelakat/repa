@@ -13,6 +13,8 @@ find packages/ -maxdepth 1 -mindepth 1 -type d | while read pkgpath; do
     cp -r "$pkgpath" "$WORKSPACE/$BUILDROOT_VER/package/"
 done
 
+# Patch config file
+patch -p 0 --forward < package_config.patch || true
 
 (
     cd "$WORKSPACE/$BUILDROOT_VER"
@@ -21,4 +23,5 @@ done
     make menuconfig
     sed -ie "s,$XTOOLS_DIR,/data/matelakat/crosstoolng/x-tools,g" .config
     make savedefconfig BR2_DEFCONFIG="$THIS_DIR/repa_defconfig"
+    sed -ie "s,/data/matelakat/crosstoolng/x-tools,$XTOOLS_DIR,g" .config
 )
