@@ -1,3 +1,4 @@
+.toolchain-config
 .crosstool-ng-src
 .crosstool-ng
 .workspace
