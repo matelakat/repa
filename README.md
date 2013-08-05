@@ -25,6 +25,11 @@ paths:
 
     ./configure_crosscompiler.sh
 
+Now you should have a configuration, that works. Should you wish to change
+the crosstool parameters, please use: `edit_crosscompiler_settings.sh`. This
+will make sure that the configuration file is changed back to a version
+controlled file.
+
 Build the cross compiler. This is a long operation. It will build the cross
 compiler. Takes around an hour on my machine (Core 2 Duo P8700 with ssd).
 
