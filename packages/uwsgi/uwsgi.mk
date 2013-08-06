@@ -10,6 +10,11 @@ endef
 
 define UWSGI_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/uwsgi $(TARGET_DIR)/usr/bin
+    $(INSTALL) -d -m 0755 -o uwsgi -g uwsgi $(TARGET_DIR)/var/uwsgi
+endef
+
+define UWSGI_USERS
+    uwsgi -1 uwsgi -1 * /var/uwsgi - - Daemon for running uwsgi processes
 endef
 
 $(eval $(generic-package))
