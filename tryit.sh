@@ -24,6 +24,9 @@ fi
 
 qemu-system-x86_64 \
   -kernel "$LOCAL_KERNEL" \
-  -net none \
+  -net nic,model=virtio \
+  -net user,hostfwd=::2223-:22,vlan=0 \
   -drive file="$WORKSPACE/$BUILDROOT_VER/output/images/rootfs.ext2" \
   -append root=/dev/sda
+
+
